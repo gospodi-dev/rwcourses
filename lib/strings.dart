@@ -1,5 +1,5 @@
 class Strings {
-  static String appTitle = 'RW Courses';
+  static String appTitle = 'Gospodi Courses';
   static String filter = 'Filter';
   static String ios = 'iOS';
   static String android = 'Android';
