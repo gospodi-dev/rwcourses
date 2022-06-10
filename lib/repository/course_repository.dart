@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:rwcourses/model/course.dart';
 import 'repository.dart';
 import '../constants.dart';
@@ -22,7 +21,7 @@ class CourseRepository implements Repository {
 
     final uri = Uri.parse(url); // преобразуем полученный url
     final response = await http.get(uri); // делаем фактический запрос
-    final apiResponse = json.decoder(response.body) as Map<String, dynamic>;
+    final apiResponse = json.decode(response.body) as Map<String, dynamic>;
     print(apiResponse);
 
     return courses;
