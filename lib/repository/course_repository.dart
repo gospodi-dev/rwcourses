@@ -1,6 +1,7 @@
 import 'package:rwcourses/model/course.dart';
 import 'repository.dart';
 import '../constants.dart';
+import 'package:http/http.dart' as http;
 
 // класс хранилища курсов
 
