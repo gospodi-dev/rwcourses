@@ -1,5 +1,6 @@
 import 'package:rwcourses/model/course.dart';
 import 'repository.dart';
+import '../constants.dart';
 
 // класс хранилища курсов
 
@@ -10,6 +11,11 @@ class CourseRepository implements Repository {
   @override
   Future<List<Course>> getCourses(int domainFilter) async {
     final courses = <Course>[];
+    var url = dataURL;
+
+    if (domainFilter != Constants.allFilter) {
+      url += ';&filter[domain_ids][]=$domainFilter';
+    }
 
     return courses;
   }
