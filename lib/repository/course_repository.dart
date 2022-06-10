@@ -1,13 +1,8 @@
-import 'package:rwcourses/model/course.dart';
-
 import 'repository.dart';
 
 // класс хранилища курсов
 
 class CourseRepository implements Repository {
-  @override
-  Future<List<Course>> getCourses(int domainFilter) {
-    // TODO: implement getCourses
-    throw UnimplementedError();
-  }
+  String dataURL =
+      'https://api.raywenderlich.com/api/contents?filter[content_types][]=collection';
 }
