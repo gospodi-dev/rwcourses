@@ -18,6 +18,9 @@ class CourseRepository implements Repository {
       url += ';&filter[domain_ids][]=$domainFilter';
     }
 
+    final uri = Uri.parse(url); // преобразуем полученный url
+    final response = await http.get(uri); // делаем фактический запрос
+
     return courses;
   }
 }
