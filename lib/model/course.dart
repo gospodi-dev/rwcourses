@@ -9,4 +9,9 @@ class Course {
       : courseId = json['id'] as String,
         name = json['attributes']['name'] as String,
         description = json['attributes']['description_plain_text'] as String;
+
+  @override
+  String toString() {
+    return name;
+  }
 }
