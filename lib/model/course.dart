@@ -6,7 +6,8 @@ class Course {
   final String difficulty;
   final String contributors;
 
-  Course(this.courseId, this.name, this.description);
+  Course(this.courseId, this.name, this.description, this.artworkUrl,
+      this.contributors, this.difficulty);
 
   Course.fromJson(Map<String, dynamic> json)
       : courseId = json['id'] as String,
