@@ -22,7 +22,10 @@ class CourseRepository implements Repository {
     final uri = Uri.parse(url); // преобразуем полученный url
     final response = await http.get(uri); // делаем фактический запрос
     final apiResponse = json.decode(response.body) as Map<String, dynamic>;
-    print(apiResponse);
+    final data = apiResponse['data'] as List;
+    for (final json in data) {
+      courses.add(Course.fromJson(json as Map<String, dynamic>));
+    }
 
     return courses;
   }
