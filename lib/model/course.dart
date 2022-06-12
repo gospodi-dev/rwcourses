@@ -1,3 +1,4 @@
+// ignore: unused_import
 import 'dart:convert';
 import 'package:rwcourses/constants.dart';
 import 'package:rwcourses/model/domain.dart';
@@ -58,7 +59,7 @@ class Course {
   String get domainString {
     var result = '';
     for (var i = 0; i < domains.length - 1; i++) {
-      result += domains[i].name + ', ';
+      result += '${domains[i].name}, ';
     }
     result += domains.last.name;
     return result;
@@ -66,6 +67,6 @@ class Course {
 
   @override
   String toString() {
-    return name + ': ' + domainString;
+    return '$name: $domainString';
   }
 }
