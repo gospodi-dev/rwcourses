@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:rwcourses/constants.dart';
 import 'package:rwcourses/model/domain.dart';
 
 class Course {
@@ -30,6 +31,27 @@ class Course {
             json['relationships']['domains']['data'][i]['id'] as String);
         domains.add(domain);
       }
+    }
+  }
+
+  static Domain getDomain(String domainId) {
+    switch (domainId) {
+      case Constants.iosDomain:
+        return Domain.ios;
+      case Constants.androidDomain:
+        return Domain.android;
+      case Constants.unityDomain:
+        return Domain.unity;
+      case Constants.sssDomain:
+        return Domain.sss;
+      case Constants.flutterDomain:
+        return Domain.flutter;
+      case Constants.macosDomain:
+        return Domain.macos;
+      case Constants.archivedDomain:
+        return Domain.archived;
+      default:
+        return Domain.unknown;
     }
   }
 
