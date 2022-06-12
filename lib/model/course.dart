@@ -66,6 +66,6 @@ class Course {
 
   @override
   String toString() {
-    return name + ': ' + contributors;
+    return name + ': ' + domainString;
   }
 }
