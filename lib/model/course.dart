@@ -1,3 +1,5 @@
+import 'package:rwcourses/model/domain.dart';
+
 class Course {
   final String courseId;
   final String name;
@@ -5,6 +7,7 @@ class Course {
   final String artworkUrl;
   final String difficulty;
   final String contributors;
+  final List<Domain> domains;
 
   Course(this.courseId, this.name, this.description, this.artworkUrl,
       this.contributors, this.difficulty);
