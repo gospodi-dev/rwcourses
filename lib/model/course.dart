@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:rwcourses/model/domain.dart';
 
 class Course {
@@ -19,6 +21,18 @@ class Course {
         artworkUrl = json['attributes']['card_artwork_url'] as String,
         difficulty = json['attributes']['difficulty'] as String,
         contributors = json['attributes']['contributor_string'] as String;
+        // добавляем функции по анализу доменов курсов
+        domains = [] {
+          final domainData = json['relationships']['domains'] as List<dynamic>;
+          if (domainData.length > 0) {
+            for (var i = 0; i < domainData.length; i++) {
+              final domain = Course.getDomain(
+                json['relationships']['domains']['data'][i]['id'] as String);
+                domains.add(domain);
+            }
+            }
+          }
+        }
 
   @override
   String toString() {
