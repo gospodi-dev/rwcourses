@@ -10,7 +10,7 @@ class Course {
   final List<Domain> domains;
 
   Course(this.courseId, this.name, this.description, this.artworkUrl,
-      this.contributors, this.difficulty);
+      this.contributors, this.difficulty, this.domains);
 
   Course.fromJson(Map<String, dynamic> json)
       : courseId = json['id'] as String,
