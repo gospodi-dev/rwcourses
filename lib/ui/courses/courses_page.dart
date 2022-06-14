@@ -23,7 +23,9 @@ class _CoursesPageState extends State<CoursesPage> {
         if (courses == null) {
           return const Center(child: CircularProgressIndicator());
         }
-        return ListView.builder();
+        return ListView.builder(
+          padding: const EdgeInsets.all(16.0),
+        );
       },
     );
   }
