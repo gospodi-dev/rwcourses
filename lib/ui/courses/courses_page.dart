@@ -25,6 +25,10 @@ class _CoursesPageState extends State<CoursesPage> {
         }
         return ListView.builder(
           padding: const EdgeInsets.all(16.0),
+          itemCount: courses.length,
+          itemBuilder: (BuildContext context, int position) {
+            return _buildRow(courses[position]);
+          },
         );
       },
     );
