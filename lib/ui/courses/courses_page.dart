@@ -35,6 +35,7 @@ class _CoursesPageState extends State<CoursesPage> {
   }
 
   Widget _buildRow(Course course) {
-    return Text(course.name);
+    return ListTile(
+        title: Text(course.name, style: const TextStyle(fontSize: 18.0)));
   }
 }
