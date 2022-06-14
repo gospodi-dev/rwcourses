@@ -27,4 +27,8 @@ class _CoursesPageState extends State<CoursesPage> {
       },
     );
   }
+
+  Widget _buildRow(Course course) {
+    return Text(course.name);
+  }
 }
