@@ -5,7 +5,7 @@ import 'package:rwcourses/constants.dart';
 import 'package:rwcourses/model/course.dart';
 
 class CourseDetailsPage extends StatelessWidget {
-  const CourseDetailsPage({Key? key}) : super(key: key);
+  const CourseDetailsPage({Key? key, required this.course}) : super(key: key);
 
   final Course course;
 
