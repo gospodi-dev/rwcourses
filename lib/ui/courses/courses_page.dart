@@ -43,6 +43,9 @@ class _CoursesPageState extends State<CoursesPage> {
           child: Text(course.name, style: const TextStyle(fontSize: 18.0)),
         ),
         subtitle: Text(course.domainString),
+        onTap: () {
+          Navigator.of(context).push<MaterialPageRoute>();
+        },
         trailing: ClipRRect(
           borderRadius: BorderRadius.circular(8.0),
           child: Image.network(course.artworkUrl),
