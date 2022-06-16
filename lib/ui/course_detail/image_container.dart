@@ -18,6 +18,13 @@ class ImageContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      width: width,
+      height: height,
+      decoration: BoxDecoration(
+        color: placeholder,
+        image: url.contains('http') ? DecorationImage() : null),
+      ),
+    );
   }
 }
