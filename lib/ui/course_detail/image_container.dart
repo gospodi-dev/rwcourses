@@ -8,7 +8,13 @@ class ImageContainer extends StatelessWidget {
   final Color placeholder;
   final String url;
 
-  const ImageContainer({Key? key}) : super(key: key);
+  const ImageContainer(
+      {Key? key,
+      this.width,
+      this.height,
+      this.placeholder = const Color(0xFFEEEEEE),
+      required this.url})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
