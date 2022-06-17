@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -43,6 +45,14 @@ class CourseDetailsPage extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+
+  Widget _buildDetails(BuildContext context) {
+    const style = TextStyle(fontSize: 16.0);
+
+    return Padding(
+      padding: const EdgeInsets.only(left: 10),
     );
   }
 }
