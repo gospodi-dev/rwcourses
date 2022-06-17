@@ -53,6 +53,27 @@ class CourseDetailsPage extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.only(left: 10),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(
+            'Domain(s): ${course.domainString}',
+            style: style,
+          ),
+          Text(
+            'Level: ${course.difficulty.capitalize()}',
+            style: style,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: Text(
+              '${course.contributors}',
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
