@@ -16,9 +16,15 @@ class CourseDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(course.name)),
-      body: const Text('Course Details'),
-    );
+        appBar: AppBar(title: Text(course.name)),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            _buildBanner(),
+            _buildMain(context),
+            _buildDetails(context),
+          ],
+        ));
   }
 
   Widget _buildBanner() {
