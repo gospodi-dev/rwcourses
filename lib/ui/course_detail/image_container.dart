@@ -22,9 +22,10 @@ class ImageContainer extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        color: placeholder,
-        image: url.contains('http') ? DecorationImage(image: NetworkImage(url)) : null),
-      ),
+          color: placeholder,
+          image: url.contains('http')
+              ? DecorationImage(image: NetworkImage(url))
+              : null),
     );
   }
 }
